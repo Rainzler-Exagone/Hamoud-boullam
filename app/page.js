@@ -12,33 +12,40 @@ import selectoS from '/public/Ellipse 8.svg'
 
 
 export default function Home() {
+  const Links = [
+    {name : "About"},
+    {name : "Careers"},
+    {name : "Location"},
+]
   return( 
   
   <div>
     <main className=' bg-hamoudc md:px-20 lg:px-40'>
     <nav className=' py-10 mb-12 flex justify-between bg-hamoudc'>
-    <div className='font-Brawler text-4xl flex '>
+    <div className='font-Brawler text-4xl flex ml-6'>
       HAMOUD
     <Image src={logo} className='w-16 px-0 mx-4'/>
     </div>
     <div>{}</div>
-    <div className='flex justify-end'>
-    <ul className='flex space-x-14 px-34 text-gray-500 '>
-      <li className='font-Acme text-2xl cursor-pointer hover:text-white delay-125 '>About</li>
-      <li className='font-Acme text-2xl  cursor-pointer hover:text-white delay-125'>Careers</li>
-      <li className='font-Acme text-2xl  cursor-pointer  hover:text-white delay-125'>Location</li>
+    <ul className="backdrop-blur-lg md:pl-10 pr-28 z-10 md:static fixed top-0 right-0 md:h-auto h-screen ">
+        { 
+        Links.map((link,index)=>(
+            <li key={index} className="md:inline-block md:ml-10 ml-5 font-Acme text-3xl  cursor-pointer hover:text-white delay-125">
+                <a href="#" className="text-white  text-xl">{link.name}</a>
+            </li>
+        ))
+        }
     </ul>
-    </div>
   </nav>
   
-    <section className='min-h-screen'>
+    <section className='min-h-screen '>
      <p className='  flex items-stretch text-center leading-relaxed text-md font-Paint text-7xl mt-40 '>
      Enjoy the flavor with our 
         Hamoud latest
      </p>
     </section>
-    <section className='min-h-screen'>
-    <div className=' w-96 absolute right-48 py-7'>
+    <section className='min-h-screen '>
+    <div className=' w-96 absolute right-48 py-7 ml-9'>
       <Image src={grp2} />
     </div>
     <div className='absolute filter drop-shadow-2xl'>
