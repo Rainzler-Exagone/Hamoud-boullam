@@ -6,7 +6,18 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors:{
+      'hamoudc':'#E2DF9B',
+      'red':'red',
+      'white':'white'
+    },
     extend: {
+      fontFamily:{
+        Acme:['Acme', 'sans-serif'],
+        Brawler: ['Brawler', 'serif'],
+        Paint: ['Finger Paint'],
+        
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
